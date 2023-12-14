@@ -54,12 +54,17 @@ body {
 }
  /* intro */
  .intro{
+
+    background-image: url(./images/bg\ intro.png);
+}
+
+.introContainer{
+    max-width: 1400px;
     display: flex;
     justify-content: space-around;
     position: relative;
     flex-wrap: wrap;
     width: 100%;
-    background-image: url(./images/bg\ intro.png);
 }
 
 .introImage{
@@ -72,20 +77,21 @@ body {
 .introTitle{
     margin-bottom: 10px;
     height: auto;  
-    font-size: calc(20px + (16 + 16 * 0.7) * ((100vw - 320px) / 1280));
+    font-size: calc(12px + (16 + 16 * 0.7) * ((100vw - 320px) / 1280));
     text-align: center;
     font-family: Russo One;
     
 }
 
 .introText{
-    font-size: calc(12px + (16 + 16 * 0.7) * ((100vw - 320px) / 1280));
+    font-size: calc(8px + (16 + 16 * 0.7) * ((100vw - 320px) / 1280));
     margin-bottom: 0;
     }
 
 .introLeft{
     display: flex;
     flex-direction: column;
+    width: 50%;
     
 }
 
@@ -94,11 +100,12 @@ body {
     color: white;
     font-family: Russo One;
     font-size: 40px;
-    padding: 30px;
+    padding: 30px 0;
     background-size: 100% 100%;
     transition: 5s;
     width: 100%;
     height: 100%;
+    border-radius: 20px;
 }
 
 .introBtn:hover{
@@ -117,14 +124,25 @@ body {
     background: #F7FF9A;
     padding: 0 5px;
     border-radius: 10px;
+    width: 40%;
     margin: 10px 0;
 }
 
-@media (max-width:1173px) {
+@media (max-width:680px) {
     .introRight{
         margin: 0;
+        width: 50%;
     }
-    
+    .introLeft{
+        width: 100%;
+    }
+    .introText{
+        font-size: calc(12px + (16 + 16 * 0.7) * ((100vw - 320px) / 1280));
+        margin-bottom: 0;
+        }
+    .introTitle{
+        font-size: calc(16px + (16 + 16 * 0.7) * ((100vw - 320px) / 1280));
+    }
 }
 
 /* gallery */
@@ -142,15 +160,28 @@ body {
     color: white;
 }
 
-.galleryImages{
+.galleryBg{
+    background: url(./images/galleryBg.jpg);
+    background-size: 100% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.galleryContainer{
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    max-width: 1400px;
+    justify-content: center;
+    box-shadow: #000 1 1;
+
 }
 
 .galleryImg1{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 35%;
 }
 .galleryImg2{
     display: flex;
@@ -176,7 +207,7 @@ body {
 }
 
 .galleryImg23{
-    width: 50%;
+    width: 35%;
 }
 
 /* about */
@@ -204,21 +235,30 @@ body {
     color: white;
 }
 
-.aboutList{
+.aboutContainer{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     margin: 0 30px;
+    max-width: 1400px;
 }
 
 .aboutElement{
     background: #BBFF9A;
     width: 25%;
+    border-radius: 360px;
+    height: 30%;
+    margin: 40px 30px;
+    padding-bottom: 40px;
 }
 
-@media (max-width:680px) {
+@media (max-width:800px) {
     .aboutElement{
-        width: 100%;
+        width: 25%;
+        margin: 40px 10px;
+    }
+    .aboutElementName{
+        font-size: calc(7px + 16 * (100vw / 1280));
     }
     
 }
@@ -226,7 +266,7 @@ body {
 .aboutElementName{
     font-family: Russo One;
     text-align: center;
-    font-size: calc(15px + 16 * (100vw / 1280));
+    font-size: calc(6px + 16 * (100vw / 1280));
 }
 
 .aboutElementPictures{
@@ -238,7 +278,11 @@ body {
 
 .med{
     width: 100%;
-    background-image: url(./images/medBg.jpg);
+}
+
+.medBg{
+    background-image: url(./images/medBg.png);
+    background-size: 100% 100%;
 }
 
 .medTop{
@@ -254,58 +298,84 @@ body {
     color: white;
 }
 
-.medList{
+.medContainer{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     margin: 0 30px;
+    max-width: 1400px;
 }
 
 .medElement1{
     background: #9AC2FF;
-    width: 30%;
+    width: 15%;
+    border-radius: 80px;
+    height: 30%;
+    margin: 40px 30px;
 }
 
 .medElement2{
     background: #FF9A9A;
-    width: 30%;
+    width: 15%;
+    border-radius: 80px;
+    height: 30%;
+    margin: 40px 30px;
 }
 
 .medElement3{
     background: #F7FF9A;
-    width: 30%;
+    width: 15%;
+    border-radius: 80px;
+    height: 30%;
+    margin: 40px 30px;
+}
+
+.medElement4{
+    background: #f50202;
+    width: 15%;
+    border-radius: 80px;
+    height: 30%;
+    margin: 40px 30px;
 }
 
 .medElementName{
     font-family: Russo One;
     text-align: center;
-    font-size: calc(14px + (16 + 16 * 0.2) * ((100vw - 320px) / 1280));
+    font-size: calc(8px + (16 * 0.2) * ((100vw - 320px) / 1280));
     margin-bottom: 10px;
 }
 @media (max-width:680px) {
-    .medElement1{width: 100%;}
-    .medElement2{width: 100%;}
-    .medElement3{width: 100%;}
+    .medElement1{width: 30%;
+        margin: 20px 10px;}
+    .medElement2{width: 30%;
+        margin: 20px 10px;}
+    .medElement3{width: 30%;
+        margin: 20px 10px;}
+    .medElement4{width: 30%;
+        margin: 20px 10px;}
     .medElementName{
-        font-size: calc(28px + (16 + 16 * 0.7) * ((100vw - 320px) / 1280));
+        font-size: calc(8px + (16 * 0.5) * ((100vw - 320px) / 1280));
     }
 }
 
 @media (min-width:1150px) {
-        .medElementName{font-size: calc(14px + (16 + 16 * 0.7) * ((100vw - 320px) / 1280));
+        .medElementName{font-size: calc(10px + (16 * 0.7) * ((100vw - 320px) / 1280));
     }
+        .medElementDescription{
+            font-size: calc(8px + (16 * 0.7) * ((100vw - 320px) / 1280));
+        }
 }
 .medElementDescription{
     font-family: Russo One;
     text-align: center;
-    font-size: calc(10px + (16 + 16 * 0.7) * ((100vw - 320px) / 1280));
+    font-size: calc(12px + (16 * 0.2) * ((100vw - 320px) / 1280));
     margin-bottom: 40px;
     margin-top: 0px;
 }
 
 .medElementPictures{
     width: 100%;
-    border-radius: 5px;
+    border-radius: 80px;
 }
 
 /* podvalchik */
@@ -313,6 +383,12 @@ body {
 .podvalBg{
     width: 100%;
     background: linear-gradient(180deg, #773636 0%, #D56666 100%);
+    display: flex;
+    justify-content: space-around;
+}
+
+.podvalContainer{
+    max-width: 1400px;
     display: flex;
     justify-content: space-around;
 }
@@ -334,8 +410,8 @@ body {
 
 .podvalLogo{
     border-radius: 999999px;
-    width: 303px;
-    height: 303px;
+    width: 251px;
+    height: 251px;
     margin-bottom: 15px;
     box-shadow: 10px 15px 4px 0px rgba(0, 0, 0, 0.25);
 }
@@ -343,6 +419,7 @@ body {
 .podvalCenter{
     display: flex;
     flex-direction: column;
+    margin: 0 40px;
     color: white;
     width: 30%;
     align-items: center;
@@ -352,8 +429,8 @@ body {
 
 .podvalCenterElement{
     font-family: Russo One;
-    font-size: 20px;
-    padding: 20px;
+    font-size: 16px;
+    padding: 0px;
     margin: 0;
     display: flex;
     text-decoration: none;
@@ -363,13 +440,15 @@ body {
 
 .podvalCenterElementa{
     text-shadow: none;
-    margin: 8px 0;
-    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: Russo One;
 }
 
 .podvalContacts{
     font-family: Ruslan Display;
-    font-size: 40px;
+    font-size: 36px;
 }
 
 .podvalRight{
@@ -384,12 +463,12 @@ body {
 
 .podvalMenu{
     font-family: Ruslan Display;
-    font-size: 40px;
+    font-size: 36px;
 }
 
 .podvalRightElement{
     font-family: Russo One;
-    font-size: 20px;
+    font-size: 16px;
     margin: 0;
     padding: 20px;
 }
@@ -406,9 +485,6 @@ body {
 }
 
 @media (max-width:807px) {
-    .podvalLeft{
-        
-    }
     .podvalCenter{display: none;}
     .podvalRight{display: none;}
     .podvalBtn{display: block;
